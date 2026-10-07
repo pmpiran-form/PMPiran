@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PMPiran & BainovaCo | ارزیابی آمادگی مدیر پروژه برای ۲۰۲۷</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google Fonts: Vazirmatn -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            deepBlue: '#00569B',
+            darkBlue: '#003B6B',
+            orange: '#FF5500',
+            charcoal: '#46484D',
+            lightBg: '#F5F8FB',
+            surface: '#FFFFFF',
+            border: '#D9E2EA',
+            accentOrangeSoft: '#FFF3EB',
+            accentBlueSoft: '#EEF5FA'
+          }
+        },
+        fontFamily: {
+          sans: ['Vazirmatn', 'Tahoma', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  body {
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    background-color: #F5F8FB;
+    color: #46484D;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .step-panel {
+    display: none;
+  }
+  .step-panel.active {
+    display: block;
+    animation: fadeIn 0.25s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .custom-checkbox-card {
+    transition: all 0.18s ease-in-out;
+  }
+  .custom-checkbox-card:hover {
+    border-color: #00569B;
+    background-color: #FAFCFE;
+  }
+  .custom-checkbox-card.selected {
+    border-color: #00569B;
+    background-color: #EEF5FA;
+    box-shadow: 0 0 0 1px #00569B;
+  }
+
+  .custom-radio-card {
+    transition: all 0.18s ease-in-out;
+  }
+  .custom-radio-card:hover {
+    border-color: #FF5500;
+    background-color: #FFFDFB;
+  }
+  .custom-radio-card.selected {
+    border-color: #FF5500;
+    background-color: #FFF3EB;
+    box-shadow: 0 0 0 1px #FF5500;
+  }
+</style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+  <!-- Top Navigation Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm backdrop-blur-md bg-white/95">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
+      <!-- Dual Logos -->
+      <div class="flex items-center gap-3">
+        <a href="https://pmpiran.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded-xl bg-[#00569B] flex items-center justify-center text-white font-black text-sm tracking-wider shadow-sm group-hover:bg-[#003B6B] transition-colors">
+            PMP
+          </div>
+          <div class="text-right hidden sm:block">
+            <span class="block text-xs font-bold text-[#00569B] leading-none">PMPiran</span>
+            <span class="text-[10px] text-slate-400">مرجع مدیریت پروژه</span>
+          </div>
+        </a>
+        <span class="text-slate-300 font-light text-xl">|</span>
+        <a href="https://bainovaco.com/en" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded-xl bg-[#FF5500] flex items-center justify-center text-white font-black text-sm tracking-wider shadow-sm group-hover:opacity-90 transition-opacity">
+            BAI
+          </div>
+          <div class="text-right hidden sm:block">
+            <span class="block text-xs font-bold text-[#FF5500] leading-none">BainovaCo</span>
+            <span class="text-[10px] text-slate-400">Future of Work</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Header Center Info -->
+      <div class="text-left sm:text-left flex items-center gap-2">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-bold bg-blue-50 text-[#00569B] border border-blue-100">
+          نسخه پیشرفته ۲۰۲۷
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Form Wrapper -->
+  <main class="max-w-4xl w-full mx-auto px-4 sm:px-6 py-8 flex-1">
+    
+    <!-- Hero Banner & Progress Container -->
+    <div class="bg-gradient-to-r from-[#003B6B] via-[#00569B] to-[#00569B] text-white rounded-2xl p-6 sm:p-8 shadow-md relative overflow-hidden mb-8">
+      <div class="absolute -left-12 -top-12 w-48 h-48 bg-white/5 rounded-full pointer-events-none"></div>
+      <div class="relative z-10 space-y-2">
+        <div class="flex items-center gap-2 text-xs font-semibold text-blue-200">
+          <span class="w-2 h-2 rounded-full bg-[#FF5500] animate-pulse"></span>
+          پرسشنامه هوشمند ارزیابی صلاحیت‌های شغلی
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-white">ارزیابی آمادگی مدیر پروژه برای افق ۲۰۲۷</h1>
+        <p class="text-xs sm:text-sm text-blue-100 max-w-2xl leading-relaxed">
+          این فرم اطلاعات حرفه‌ای، تجربیات عملی هوش مصنوعی، تخصص صنعتی و اولویت‌های شغلی شما را استخراج کرده و پرامپت مهندسی‌شده دقیقی جهت تدوین نقشه راه اختصاصی تولید می‌کند.
+        </p>
+
+        <!-- Progress Tracker Bar -->
+        <div class="pt-4">
+          <div class="flex items-center justify-between text-xs text-blue-200 font-bold mb-1.5">
+            <span id="stepProgressLabel">گام ۱ از ۵: اطلاعات هویتی و پروفایل</span>
+            <span id="stepPercentLabel" class="font-mono text-orange-300">۲۰٪</span>
+          </div>
+          <div class="w-full bg-black/20 rounded-full h-2.5 overflow-hidden p-0.5">
+            <div id="progressBar" class="bg-gradient-to-r from-orange-400 to-[#FF5500] h-full rounded-full transition-all duration-300" style="width: 20%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Questionnaire Form -->
+    <form id="assessmentForm" class="space-y-6">
+
+      <!-- STEP 1: Personal & Career Profile -->
+      <section class="step-panel active bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6" data-step="1">
+        <div class="border-b border-slate-200 pb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-black bg-blue-100 text-[#00569B]">گام اول</span>
+            <h2 class="text-lg sm:text-xl font-bold text-slate-900">پروفایل فردی و چشم‌انداز حرفه‌ای</h2>
+          </div>
+          <p class="text-xs text-slate-500 mt-1">اطلاعات پایه جهت تعیین سطح سابقه، موقعیت شغلی کنونی و بازار هدف بین‌المللی یا داخلی.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <!-- Name -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="name">نام و نام خانوادگی <span class="text-rose-500">*</span></label>
+            <input type="text" id="name" required placeholder="مثال: مهدی معین" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+          </div>
+
+          <!-- Current Role -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="currentRole">نقش و عنوان شغلی فعلی <span class="text-rose-500">*</span></label>
+            <input type="text" id="currentRole" required placeholder="مثال: مدیر پروژه ارشد / Senior Project Manager" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+          </div>
+
+          <!-- Experience -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="experience">سابقه کار در مدیریت پروژه <span class="text-rose-500">*</span></label>
+            <select id="experience" required class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+              <option value="کمتر از ۳ سال (سطح ورود / Junior)">کمتر از ۳ سال (سطح ورود / Junior)</option>
+              <option value="۳ تا ۷ سال (سطح میانی / Mid-level)">۳ تا ۷ سال (سطح میانی / Mid-level)</option>
+              <option value="۸ تا ۱۵ سال (سطح ارشد / Senior)" selected>۸ تا ۱۵ سال (سطح ارشد / Senior)</option>
+              <option value="بیش از ۱۵ سال (سطح راهبری / Director / Executive)">بیش از ۱۵ سال (سطح راهبری / Director / Executive)</option>
+            </select>
+          </div>
+
+          <!-- Industry -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="industry">صنعت و حوزه فعالیت اصلی <span class="text-rose-500">*</span></label>
+            <select id="industry" required class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+              <option value="">انتخاب کنید...</option>
+              <option value="عمران، ساخت‌وساز و EPC">عمران، ساخت‌وساز و EPC</option>
+              <option value="نفت، گاز، پتروشیمی و انرژی">نفت، گاز، پتروشیمی و انرژی</option>
+              <option value="فناوری اطلاعات و توسعه نرم‌افزار (IT / Software)">فناوری اطلاعات و توسعه نرم‌افزار (IT / Software)</option>
+              <option value="بانکداری، پرداخت و خدمات مالی (Fintech / Banking)">بانکداری، پرداخت و خدمات مالی (Fintech / Banking)</option>
+              <option value="تولید صنعتی، خودرو و زنجیره تأمین">تولید صنعتی، خودرو و زنجیره تأمین</option>
+              <option value="دارویی، بیوتکنولوژی و سلامت">دارویی، بیوتکنولوژی و سلامت</option>
+              <option value="مشاوره مدیریت و خدمات سازمانی">مشاوره مدیریت و خدمات سازمانی</option>
+              <option value="سایر">سایر صنایع...</option>
+            </select>
+          </div>
+
+          <!-- Other Industry field -->
+          <div id="industryOtherWrapper" class="sm:col-span-2 hidden">
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="industryOther">توضیح صنعت در صورت انتخاب «سایر»</label>
+            <input type="text" id="industryOther" placeholder="مثال: مخابرات، لجستیک و بنادر، معدن..." class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+          </div>
+
+          <!-- English Proficiency -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="englishLevel">سطح تسلط به زبان انگلیسی</label>
+            <select id="englishLevel" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+              <option value="پایه (مکاتبات ساده با دیکشنری / Basic)">پایه (مکاتبات ساده با دیکشنری / Basic)</option>
+              <option value="متوسط کاری (امکان شرکت در جلسات و درک مستندات / Intermediate)" selected>متوسط کاری (امکان شرکت در جلسات و درک مستندات / Intermediate)</option>
+              <option value="مسلط و بین‌المللی (Professional Working / IELTS 7+)">مسلط و بین‌المللی (Professional Working / IELTS 7+)</option>
+            </select>
+          </div>
+
+          <!-- Geographic Strategy -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="geographicGoal">وضعیت جغرافیایی و هدف بازار کار</label>
+            <select id="geographicGoal" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+              <option value="رشد و رهبری در بازار داخلی ایران" selected>رشد و رهبری در بازار داخلی ایران</option>
+              <option value="مهاجرت و فعالیت حضوری در منطقه خلیج فارس (GCC / امارات / قطر / عمان)">مهاجرت و فعالیت حضوری در منطقه خلیج فارس (GCC / امارات / قطر / عمان)</option>
+              <option value="مهاجرت به کشورهای غربی (کانادا، اروپا، استرالیا)">مهاجرت به کشورهای غربی (کانادا، اروپا، استرالیا)</option>
+              <option value="فریلنسری بین‌المللی و کار ریموت ارزی از ایران">فریلنسری بین‌المللی و کار ریموت ارزی از ایران</option>
+              <option value="ترکیبی / هنوز تصمیم قطعی نگرفته‌ام">ترکیبی / هنوز تصمیم قطعی نگرفته‌ام</option>
+            </select>
+          </div>
+
+          <!-- Main Goal for 2027 -->
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="mainGoal">هدف اصلی شما تا پایان سال ۲۰۲۷ چیست؟ <span class="text-rose-500">*</span></label>
+            <textarea id="mainGoal" required rows="3" placeholder="مثال: تصدی پست PMO Director در هلدینگ‌های معتبر، راه‌اندازی فرآیندهای هیبرید مبتنی بر هوش مصنوعی، افزایش ۲ برابری درآمد..." class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800"></textarea>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+          <span class="text-xs text-slate-400">فیلدهای ستاره‌دار (*) الزامی هستند</span>
+          <button type="button" class="btn-next inline-flex items-center gap-2 px-6 py-2.5 bg-[#00569B] text-white text-xs font-bold rounded-xl hover:bg-[#003B6B] transition-colors shadow-sm">
+            مرحله بعد: هوش مصنوعی
+            <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- STEP 2: AI in Everyday Practice -->
+      <section class="step-panel bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6" data-step="2">
+        <div class="border-b border-slate-200 pb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-black bg-orange-100 text-[#FF5500]">گام دوم</span>
+            <h2 class="text-lg sm:text-xl font-bold text-slate-900">میزان آمادگی و کاربرد هوش مصنوعی (AI Readiness)</h2>
+          </div>
+          <p class="text-xs text-slate-500 mt-1">این سنجش مشخص می‌کند آیا از AI فقط برای چت استفاده می‌کنید یا در حال ورود به لایه سیستم‌سازی و خودکارسازی گردش‌کارها هستید.</p>
+        </div>
+
+        <!-- AI Level Selection -->
+        <div class="space-y-2">
+          <label class="block text-xs font-bold text-slate-700">سطح واقعی خود در کار با ابزارهای هوش مصنوعی را چگونه توصیف می‌کنید؟</label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <label class="custom-radio-card p-3.5 rounded-xl border border-slate-200 cursor-pointer flex flex-col justify-between">
+              <div class="flex items-center gap-2">
+                <input type="radio" name="aiLevel" value="مبتدی (Tier 1: استفاده عمومی، ترجمه، پاسخ به پرسش‌های ساده)" class="text-[#FF5500] focus:ring-0">
+                <span class="text-xs font-bold text-slate-800">مبتدی (Tier 1)</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-2 leading-relaxed">استفاده موردی از ChatGPT/Gemini برای نگارش ایمیل و خلاصه‌سازی ساده متن.</p>
+            </label>
+
+            <label class="custom-radio-card selected p-3.5 rounded-xl border border-slate-200 cursor-pointer flex flex-col justify-between">
+              <div class="flex items-center gap-2">
+                <input type="radio" name="aiLevel" value="متوسط (Tier 2: پرامپت‌نویسی کاری، تحلیل فایل، گزارش‌سازی)" checked class="text-[#FF5500] focus:ring-0">
+                <span class="text-xs font-bold text-slate-800">متوسط (Tier 2)</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-2 leading-relaxed">آپلود اکسل و گزارشات، پرامپت‌های ساخت‌یافته کاری، استخراج داده با Claude یا GPT-4o.</p>
+            </label>
+
+            <label class="custom-radio-card p-3.5 rounded-xl border border-slate-200 cursor-pointer flex flex-col justify-between">
+              <div class="flex items-center gap-2">
+                <input type="radio" name="aiLevel" value="پیشرفته (Tier 3: ساخت Workflow، Vibe Coding، اتوماسیون با n8n/Python)" class="text-[#FF5500] focus:ring-0">
+                <span class="text-xs font-bold text-slate-800">پیشرفته (Tier 3)</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-2 leading-relaxed">ساخت Custom GPTs، وب‌اپ با Cursor، پایپ‌لاین داده و اتصال به سیستم‌های PMIS.</p>
+            </label>
+          </div>
+        </div>
+
+        <!-- AI Use Cases Checkboxes -->
+        <div class="space-y-2">
+          <label class="block text-xs font-bold text-slate-700">تاکنون کدام‌یک از موارد زیر را به‌طور عملی در کار خود با هوش مصنوعی تجربه کرده‌اید؟</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2.5">
+              <input type="checkbox" name="aiUse" value="تحلیل اسناد و استخراج اطلاعات از PDF/قرارداد" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-medium text-slate-700">تحلیل قرارداد و اسناد فنی</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2.5">
+              <input type="checkbox" name="aiUse" value="نگارش صورتجلسات، مکاتبات کارگاهی و ایمیل‌ها" checked class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-medium text-slate-700">صورتجلسات و مکاتبات رسمی</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2.5">
+              <input type="checkbox" name="aiUse" value="تحلیل داده‌های اکسل، کنترل هزینه و EVM" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-medium text-slate-700">تحلیل اکسل، بودجه و EVM</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2.5">
+              <input type="checkbox" name="aiUse" value="مدیریت ریسک، آنالیز سناریو و پشتیبانی تصمیم‌گیری" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-medium text-slate-700">مدیریت ریسک و تصمیم‌گیری</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2.5">
+              <input type="checkbox" name="aiUse" value="طراحی گردش‌کارهای خودکار (Automation با Make/n8n/Zapier)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-medium text-slate-700">اتوماسیون (n8n / Make / API)</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2.5">
+              <input type="checkbox" name="aiUse" value="ساخت اپلیکیشن/داشبورد با Vibe Coding (Cursor, Lovable, v0)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-medium text-slate-700">ساخت ابزار / Vibe Coding</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <!-- Hours per week -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="aiWeeklyHours">میزان استفاده هفتگی شما از AI در محیط کار</label>
+            <select id="aiWeeklyHours" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+              <option value="کمتر از ۱ ساعت در هفته (خیلی کم)">کمتر از ۱ ساعت در هفته (خیلی کم)</option>
+              <option value="۱ تا ۳ ساعت در هفته (استفاده مقطعی)">۱ تا ۳ ساعت در هفته (استفاده مقطعی)</option>
+              <option value="۳ تا ۷ ساعت در هفته (استفاده منظم روزانه)" selected>۳ تا ۷ ساعت در هفته (استفاده منظم روزانه)</option>
+              <option value="بیش از ۷ ساعت در هفته (همکار دیجیتال دائم در تمام تسک‌ها)">بیش از ۷ ساعت در هفته (همکار دیجیتال دائم در تمام تسک‌ها)</option>
+            </select>
+          </div>
+
+          <!-- Real Example of AI Use -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="aiRealCase">یک نمونه واقعی از استفاده اخیر خود از AI را شرح دهید <span class="text-rose-500">*</span></label>
+            <textarea id="aiRealCase" required rows="2" placeholder="مثال: متن گزارش ماهانه پروژه را دادم تا ۳ ریسک کلیدی را استخراج کند و خلاصه مدیریتی بنویسد..." class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800"></textarea>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+          <button type="button" class="btn-prev inline-flex items-center gap-2 px-5 py-2.5 bg-slate-100 text-slate-700 text-xs font-bold rounded-xl hover:bg-slate-200 transition-colors">
+            <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            گام قبلی
+          </button>
+          <button type="button" class="btn-next inline-flex items-center gap-2 px-6 py-2.5 bg-[#00569B] text-white text-xs font-bold rounded-xl hover:bg-[#003B6B] transition-colors shadow-sm">
+            مرحله بعد: مدارک حرفه‌ای
+            <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- STEP 3: Professional Credentials & Certifications -->
+      <section class="step-panel bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6" data-step="3">
+        <div class="border-b border-slate-200 pb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-black bg-blue-100 text-[#00569B]">گام سوم</span>
+            <h2 class="text-lg sm:text-xl font-bold text-slate-900">اعتبار حرفه‌ای و گواهینامه‌های بین‌المللی (Credentials)</h2>
+          </div>
+          <p class="text-xs text-slate-500 mt-1">مدل نهایی مدارک را بر اساس سابقه شما فیلتر کرده و از پیشنهاد دوره‌های تکراری یا سطح پایین خودداری خواهد کرد.</p>
+        </div>
+
+        <!-- Current Certifications -->
+        <div class="space-y-2">
+          <label class="block text-xs font-bold text-slate-700">کدام‌یک از مدارک و گواهینامه‌های زیر را در حال حاضر دریافت کرده‌اید؟</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="currentCerts" value="PMP® (PMI)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-bold text-slate-800">PMP®</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="currentCerts" value="PMI-ACP® (Agile)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-bold text-slate-800">PMI-ACP®</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="currentCerts" value="PMI-PBA® (Business Analysis)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-bold text-slate-800">PMI-PBA®</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="currentCerts" value="PMI-CP™ (Construction Professional)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-bold text-slate-800">PMI-CP™</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="currentCerts" value="PSM I / PSM II (Scrum.org)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-bold text-slate-800">PSM I / II</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="currentCerts" value="PSPO I / PSPO II (Product Owner)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-bold text-slate-800">PSPO I / II</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="currentCerts" value="IPMA (سطح D/C/B/A)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-bold text-slate-800">IPMA</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="currentCerts" value="هیچ‌کدام (هنوز گواهینامه‌ای دریافت نکرده‌ام)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-semibold text-slate-500">هیچ‌کدام</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Target Certifications -->
+        <div class="space-y-2">
+          <label class="block text-xs font-bold text-slate-700">در ۱۲ الی ۱۸ ماه آینده به دریافت کدام مدارک علاقه دارید؟</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="targetCerts" value="PMP® (اولویت اول)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-bold text-slate-800">PMP®</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="targetCerts" value="PMI-ACP® (چابک)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-bold text-slate-800">PMI-ACP®</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="targetCerts" value="PMI-CP™ (مدیریت ساخت و عمران)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-bold text-slate-800">PMI-CP™</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="targetCerts" value="PfMP® / PgMP® (پورتفولیو / طرح)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-bold text-slate-800">PfMP / PgMP</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="targetCerts" value="Scrum.org (PSM / PSPO)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-bold text-slate-800">PSM / PSPO</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="targetCerts" value="IPMA Certifications" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-bold text-slate-800">IPMA</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="targetCerts" value="دوره‌های تخصصی کلیم و فیدیک (FIDIC)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-bold text-slate-800">FIDIC / Claim</span>
+            </label>
+            <label class="custom-checkbox-card p-3 rounded-xl border border-slate-200 cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="targetCerts" value="فعلاً برنامه‌ای برای گواهینامه جدید ندارم" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs font-semibold text-slate-500">فعلاً هیچ‌کدام</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Reason for Cert -->
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1.5" for="certReason">مهم‌ترین انگیزه شما از اخذ مدارک چیست؟</label>
+          <select id="certReason" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+            <option value="ارتقای موقعیت شغلی و درآمد در سازمان‌های فعلی یا داخلی" selected>ارتقای موقعیت شغلی و درآمد در سازمان‌های فعلی یا داخلی</option>
+            <option value="تقویت رزومه بین‌المللی برای مهاجرت کاری (GCC یا کشورهای غربی)">تقویت رزومه بین‌المللی برای مهاجرت کاری (GCC یا کشورهای غربی)</option>
+            <option value="ایجاد مزیت رقابتی برای مشاوره، مربی‌گری و منتورشیپ">ایجاد مزیت رقابتی برای مشاوره، مربی‌گری و منتورشیپ</option>
+            <option value="یادگیری ساختاریافته چارچوب‌ها و ادبیات مشترک جهانی">یادگیری ساختاریافته چارچوب‌ها و ادبیات مشترک جهانی</option>
+            <option value="الزام مناقصات کارفرمایی و رتبه‌بندی شرکتی">الزام مناقصات کارفرمایی و رتبه‌بندی شرکتی</option>
+          </select>
+        </div>
+
+        <!-- Verification Notice Box -->
+        <div class="p-3.5 rounded-xl bg-amber-50/70 border border-amber-200 flex items-start gap-2.5 text-xs text-amber-900 leading-relaxed">
+          <svg class="w-4 h-4 text-amber-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <div>
+            <strong>توجه به مراجع رسمی:</strong> تمامی شرایط آزمون‌ها، هزینه‌ها، قوانین احراز صلاحیت (Eligibility) و آزمون‌های Pearson VUE باید پیش از تصمیم‌گیری نهایی مستقیماً از وب‌سایت‌های رسمی PMI.org یا مراکز رسمی استعلام شوند.
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+          <button type="button" class="btn-prev inline-flex items-center gap-2 px-5 py-2.5 bg-slate-100 text-slate-700 text-xs font-bold rounded-xl hover:bg-slate-200 transition-colors">
+            <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            گام قبلی
+          </button>
+          <button type="button" class="btn-next inline-flex items-center gap-2 px-6 py-2.5 bg-[#00569B] text-white text-xs font-bold rounded-xl hover:bg-[#003B6B] transition-colors shadow-sm">
+            مرحله بعد: تخصص صنعت
+            <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- STEP 4: Industry Capability & Hybrid Thinking -->
+      <section class="step-panel bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6" data-step="4">
+        <div class="border-b border-slate-200 pb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-black bg-emerald-100 text-emerald-800">گام چهارم</span>
+            <h2 class="text-lg sm:text-xl font-bold text-slate-900">تخصص صنعت، قرارداد و تفکر هیبرید (Hybrid Thinking)</h2>
+          </div>
+          <p class="text-xs text-slate-500 mt-1">تلفیق رویکردهای سنتی/پیش‌بینانه (Predictive) با متدولوژی‌های چابک و تخصص‌های حقوقی-قراردادی.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <!-- Main Specialty -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="specialty">حوزه تخصصی اولویت‌دار شما در صنعت</label>
+            <select id="specialty" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+              <option value="مدیریت قراردادها، شرایط عمومی پیمان و ادعا (Claim)">مدیریت قراردادها، شرایط عمومی پیمان و ادعا (Claim)</option>
+              <option value="برنامه‌ریزی، زمان‌بندی پیشرفته و کنترل پروژه (Primavera / EVM)" selected>برنامه‌ریزی، زمان‌بندی پیشرفته و کنترل پروژه (Primavera / EVM)</option>
+              <option value="استقرار دفتر مدیریت پروژه (Enterprise PMO & Governance)">استقرار دفتر مدیریت پروژه (Enterprise PMO & Governance)</option>
+              <option value="مدیریت ریسک‌های کمی و کیفی و عدم‌قطعیت">مدیریت ریسک‌های کمی و کیفی و عدم‌قطعیت</option>
+              <option value="تحلیل کسب‌وکار و مهندسی نیازمندی‌ها (Business Analysis)">تحلیل کسب‌وکار و مهندسی نیازمندی‌ها (Business Analysis)</option>
+              <option value="مدیریت محصول و متدولوژی‌های خالص Agile/Scrum">مدیریت محصول و متدولوژی‌های خالص Agile/Scrum</option>
+              <option value="مدیریت هزینه و مهندسی ارزش (Cost Engineering)">مدیریت هزینه و مهندسی ارزش (Cost Engineering)</option>
+            </select>
+          </div>
+
+          <!-- Project Management Method -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="projectMethod">روش غالب مدیریت پروژه در سازمان فعلی</label>
+            <select id="projectMethod" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+              <option value="آبشاری و پیش‌بینانه سنتی (Predictive / Waterfall)">آبشاری و پیش‌بینانه سنتی (Predictive / Waterfall)</option>
+              <option value="ترکیبی و هیبرید (Hybrid: Governance آبشاری + Delivery چابک)" selected>ترکیبی و هیبرید (Hybrid: Governance آبشاری + Delivery چابک)</option>
+              <option value="کاملاً چابک و تکرارشونده (Agile / Scrum / Kanban)">کاملاً چابک و تکرارشونده (Agile / Scrum / Kanban)</option>
+              <option value="بسته به نوع پروژه و کارفرما تغییر می‌کند">بسته به نوع پروژه و کارفرما تغییر می‌کند</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Conditional EPC / Construction Section -->
+        <div id="constructionQuestionsBlock" class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="block text-xs font-bold text-slate-800">میزان تسلط شما بر حوزه‌های قراردادی و حقوقی مهندسی / ساخت (EPC):</label>
+            <span class="text-[10px] text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-100">ویژه پروژه‌های زیرساختی و صنعتی</span>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+            <label class="custom-checkbox-card p-2.5 rounded-lg border border-slate-200 bg-white cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="contractSkills" value="شرایط عمومی پیمان (نشریه ۴۳۱۱)" checked class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs text-slate-700">شرایط عمومی نشریه ۴۳۱۱</span>
+            </label>
+            <label class="custom-checkbox-card p-2.5 rounded-lg border border-slate-200 bg-white cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="contractSkills" value="قراردادهای بین‌المللی فیدیک (FIDIC Red/Yellow)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs text-slate-700">قراردادهای فیدیک (FIDIC)</span>
+            </label>
+            <label class="custom-checkbox-card p-2.5 rounded-lg border border-slate-200 bg-white cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="contractSkills" value="آنالیز تاخیرات زمانی (Delay Analysis)" checked class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs text-slate-700">تحلیل تاخیرات (Delay Analysis)</span>
+            </label>
+            <label class="custom-checkbox-card p-2.5 rounded-lg border border-slate-200 bg-white cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="contractSkills" value="مدیریت ادعا و تمدید زمان (Claim & EOT)" checked class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs text-slate-700">مدیریت ادعا (Claim & EOT)</span>
+            </label>
+            <label class="custom-checkbox-card p-2.5 rounded-lg border border-slate-200 bg-white cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="contractSkills" value="پروتکل‌های بین‌المللی تاخیر (مانند SCL Delay Protocol)" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs text-slate-700">پروتکل SCL Delay</span>
+            </label>
+            <label class="custom-checkbox-card p-2.5 rounded-lg border border-slate-200 bg-white cursor-pointer flex items-center gap-2">
+              <input type="checkbox" name="contractSkills" value="قوانین مناقصات، تدارکات و خرید خارجی" class="rounded text-[#00569B] focus:ring-0">
+              <span class="text-xs text-slate-700">قوانین برگزاری مناقصات</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <!-- Agile Level -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="agileLevel">دانش و تجربه شما در متدولوژی‌های چابک (Agile / Scrum)</label>
+            <select id="agileLevel" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+              <option value="تقریباً ندارم (بیشتر در محیط‌های آبشاری سنتی کار کرده‌ام)">تقریباً ندارم (بیشتر در محیط‌های سنتی کار کرده‌ام)</option>
+              <option value="آشنایی تئوریک و مفهومی با اسکرام و کانبان" selected>آشنایی تئوریک و مفهومی با اسکرام و کانبان</option>
+              <option value="تجربه عملی هدایت اسپرینت‌ها در پروژه‌ها">تجربه عملی هدایت اسپرینت‌ها در پروژه‌ها</option>
+              <option value="تسلط عمیق و نقش اسکرام‌مستر / مربی چابک سازمانی">تسلط عمیق و نقش اسکرام‌مستر / مربی چابک سازمانی</option>
+            </select>
+          </div>
+
+          <!-- Main Weakness -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="mainWeakness">بزرگ‌ترین گلوگاه یا ضعف حرفه‌ای خود را چه می‌دانید؟ <span class="text-rose-500">*</span></label>
+            <input type="text" id="mainWeakness" required placeholder="مثال: مذاکرات قراردادی، ساخت ابزارهای AI، زبان در پرزنتیشن، معماری PMO..." class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+          <button type="button" class="btn-prev inline-flex items-center gap-2 px-5 py-2.5 bg-slate-100 text-slate-700 text-xs font-bold rounded-xl hover:bg-slate-200 transition-colors">
+            <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            گام قبلی
+          </button>
+          <button type="button" class="btn-next inline-flex items-center gap-2 px-6 py-2.5 bg-[#00569B] text-white text-xs font-bold rounded-xl hover:bg-[#003B6B] transition-colors shadow-sm">
+            مرحله بعد: افق ۲۰۲۷ و خروجی
+            <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- STEP 5: Target 2027 Profile, Constraints & Execution -->
+      <section class="step-panel bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6" data-step="5">
+        <div class="border-b border-slate-200 pb-4">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-black bg-purple-100 text-purple-800">گام پنجم</span>
+            <h2 class="text-lg sm:text-xl font-bold text-slate-900">تصویر نقش مطلوب در ۲۰۲۷ و شرایط اجرایی</h2>
+          </div>
+          <p class="text-xs text-slate-500 mt-1">تنظیم محدودیت‌های واقعی (زمان هفتگی، یادگیری و چالش‌ها) برای جلوگیری از تولید برنامه‌های غیرقابل اجرا.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <!-- Target Role -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="targetRole">نقش شغلی هدف تا پایان سال ۲۰۲۷ <span class="text-rose-500">*</span></label>
+            <input type="text" id="targetRole" required placeholder="مثال: Director of Enterprise PMO & AI Transformation" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+          </div>
+
+          <!-- Income & Career Growth -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="incomeGoal">هدف درآمدی یا رشد حرفه‌ای مورد انتظار</label>
+            <input type="text" id="incomeGoal" placeholder="مثال: افزایش ۲.۵ برابری درآمد / قرارداد ارزی ریموت / ورود به هیئت مدیره" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+          </div>
+
+          <!-- Weekly Development Time -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="weeklyDevelopmentTime">زمان قابل تخصیص در هفته برای توسعه حرفه‌ای <span class="text-rose-500">*</span></label>
+            <select id="weeklyDevelopmentTime" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+              <option value="۲ تا ۴ ساعت در هفته (فقط آخر هفته‌ها)">۲ تا ۴ ساعت در هفته (فقط آخر هفته‌ها)</option>
+              <option value="۵ تا ۸ ساعت در هفته (تعادل معقول کاری)">۵ تا ۸ ساعت در هفته (تعادل معقول کاری)</option>
+              <option value="۸ تا ۱۲ ساعت در هفته (تعهد جدی به تحول سریع)" selected>۸ تا ۱۲ ساعت در هفته (تعهد جدی به تحول سریع)</option>
+              <option value="بیش از ۱۲ ساعت در هفته (فول‌تایم یا متمرکز)">بیش از ۱۲ ساعت در هفته (فول‌تایم یا متمرکز)</option>
+            </select>
+          </div>
+
+          <!-- Preferred Learning Style -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="learningPreference">روش یادگیری ترجیحی شما</label>
+            <select id="learningPreference" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800">
+              <option value="پروژه واقعی و تمرین عملی در محیط کار" selected>پروژه واقعی و تمرین عملی در محیط کار</option>
+              <option value="دوره‌ها و بوت‌کمپ‌های ساختاریافته با استاد">دوره‌ها و بوت‌کمپ‌های ساختاریافته با استاد</option>
+              <option value="خودآموزی با کتاب، مستندات رسمی و ابزارهای AI">خودآموزی با کتاب، مستندات رسمی و ابزارهای AI</option>
+              <option value="ترکیبی از آموزش ساختاریافته و حل مسئله واقعی">ترکیبی از آموزش ساختاریافته و حل مسئله واقعی</option>
+            </select>
+          </div>
+
+          <!-- Constraints -->
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="constraints">محدودیت‌ها و چالش‌هایی که ممکن است سرعت شما را کاهش دهند</label>
+            <textarea id="constraints" rows="2" placeholder="مثال: مشغله بالای پروژه‌های کارگاهی در طول هفته، تحریم پرداخت بین‌المللی آزمون‌ها، کمبود وقت برای مطالعه منظم..." class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800"></textarea>
+          </div>
+
+          <!-- Additional Information -->
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-bold text-slate-700 mb-1.5" for="additionalInfo">هر نکته یا اطلاعات تکمیلی دیگری که مایلید لحاظ شود</label>
+            <textarea id="additionalInfo" rows="2" placeholder="مثال: علاقه‌مند به فعالیت داوطلبانه در انجمن‌های مدیریت پروژه، سابقه مدیریت قراردادهای ارزی، نیاز به منتورشیپ..." class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#00569B]/30 focus:border-[#00569B] transition-all bg-white text-slate-800"></textarea>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+          <button type="button" class="btn-prev inline-flex items-center gap-2 px-5 py-2.5 bg-slate-100 text-slate-700 text-xs font-bold rounded-xl hover:bg-slate-200 transition-colors">
+            <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            گام قبلی
+          </button>
+          <button type="button" id="btnGeneratePrompt" class="inline-flex items-center gap-2 px-7 py-3 bg-[#FF5500] text-white text-xs sm:text-sm font-black rounded-xl hover:bg-[#e04b00] transition-colors shadow-md">
+            ساخت Prompt ارزیابی راهبردی ۲۰۲۷
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </button>
+        </div>
+      </section>
+
+    </form>
+
+    <!-- Output & Generated Prompt Card (Hidden Initially) -->
+    <section id="resultCard" class="hidden mt-8 bg-white rounded-2xl border-2 border-[#00569B]/20 p-6 sm:p-8 shadow-lg space-y-5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 pb-4">
+        <div>
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 mb-1">
+            پرامپت نهایی با موفقیت آماده شد
+          </span>
+          <h2 class="text-xl font-extrabold text-slate-900">پرامپت راهبردی ارزیابی ۲۰۲۷ آماده کپی است</h2>
+          <p class="text-xs text-slate-500 mt-0.5">این دستور جامع تمام اطلاعات شما را بسته‌بندی کرده است. آن را کپی کرده و به مدل هوش مصنوعی بدهید تا سند نقشه راه HTML شما را تولید کند.</p>
+        </div>
+
+        <div class="flex items-center gap-2 self-start sm:self-auto">
+          <button id="btnCopyPrompt" type="button" class="inline-flex items-center gap-1.5 px-4 py-2 bg-[#00569B] text-white text-xs font-bold rounded-xl hover:bg-[#003B6B] transition-colors shadow-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            <span id="copyBtnText">کپی در کلیپ‌بورد</span>
+          </button>
+          <button id="btnDownloadPrompt" type="button" class="inline-flex items-center gap-1.5 px-4 py-2 bg-slate-100 text-slate-700 text-xs font-bold rounded-xl hover:bg-slate-200 transition-colors border border-slate-300">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            دانلود TXT
+          </button>
+        </div>
+      </div>
+
+      <div class="relative">
+        <textarea id="promptOutput" readonly rows="16" dir="ltr" class="w-full text-xs font-mono bg-slate-900 text-slate-100 p-4 rounded-xl border border-slate-800 focus:outline-none leading-relaxed select-all overflow-y-auto"></textarea>
+      </div>
+
+      <div class="p-3.5 bg-blue-50/70 border border-blue-200 rounded-xl text-xs text-blue-900 flex items-center justify-between">
+        <span>فایل پیشنهادی نهایی تولیدشده توسط هوش مصنوعی: <strong class="font-mono text-[#00569B]" id="suggestedFileName">PMPiran_2027_Career_Roadmap.html</strong></span>
+        <span class="text-[11px] text-slate-500">طراحی شده توسط PMPiran & BainovaCo</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-6 mt-12 text-center text-xs text-slate-500">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <a href="https://pmpiran.com" target="_blank" rel="noopener noreferrer" class="font-bold text-[#00569B] hover:underline">PMPiran.com</a>
+        <span class="text-slate-300">&bull;</span>
+        <a href="https://bainovaco.com/en" target="_blank" rel="noopener noreferrer" class="font-bold text-[#FF5500] hover:underline">BainovaCo.com</a>
+        <span class="text-slate-300">&bull;</span>
+        <span>سامانه هوشمند تدوین نقشه راه حرفه‌ای ۲۰۲۷</span>
+      </div>
+      <div class="text-[11px] text-slate-400">
+        توسعه‌یافته مطابق چارچوب‌های استاندارد PMI® و هوش مصنوعی آینده کار
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Elements & State
+    const steps = Array.from(document.querySelectorAll('.step-panel'));
+    let currentStepIndex = 0;
+
+    const progressBar = document.getElementById('progressBar');
+    const stepProgressLabel = document.getElementById('stepProgressLabel');
+    const stepPercentLabel = document.getElementById('stepPercentLabel');
+
+    const stepLabels = [
+      'گام ۱ از ۵: اطلاعات هویتی و پروفایل',
+      'گام ۲ از ۵: هوش مصنوعی و کاربردهای عملی',
+      'گام ۳ از ۵: مدارک و اعتبار حرفه‌ای',
+      'گام ۴ از ۵: تخصص صنعت و تفکر هیبرید',
+      'گام ۵ از ۵: تصویر نقش مطلوب در ۲۰۲۷'
+    ];
+
+    function updateStep(index) {
+      if (index < 0 || index >= steps.length) return;
+      currentStepIndex = index;
+
+      steps.forEach((step, i) => {
+        step.classList.toggle('active', i === currentStepIndex);
+      });
+
+      const percentage = Math.round(((currentStepIndex + 1) / steps.length) * 100);
+      progressBar.style.width = percentage + '%';
+      stepProgressLabel.textContent = stepLabels[currentStepIndex];
+      stepPercentLabel.textContent = percentage + '%';
+
+      window.scrollTo({ top: 120, behavior: 'smooth' });
+    }
+
+    // Step Navigation validation
+    document.querySelectorAll('.btn-next').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const currentPanel = steps[currentStepIndex];
+        const requiredInputs = Array.from(currentPanel.querySelectorAll('[required]'));
+        
+        for (const input of requiredInputs) {
+          if (!input.value.trim()) {
+            input.reportValidity();
+            input.focus();
+            return;
+          }
+        }
+        updateStep(currentStepIndex + 1);
+      });
+    });
+
+    document.querySelectorAll('.btn-prev').forEach(btn => {
+      btn.addEventListener('click', () => {
+        updateStep(currentStepIndex - 1);
+      });
+    });
+
+    // Toggle Other Industry field
+    const industrySelect = document.getElementById('industry');
+    const industryOtherWrapper = document.getElementById('industryOtherWrapper');
+    industrySelect.addEventListener('change', () => {
+      if (industrySelect.value === 'سایر') {
+        industryOtherWrapper.classList.remove('hidden');
+      } else {
+        industryOtherWrapper.classList.add('hidden');
+      }
+    });
+
+    // Checkbox & Radio Card Visual Active Toggle
+    document.querySelectorAll('.custom-checkbox-card').forEach(card => {
+      const checkbox = card.querySelector('input[type="checkbox"]');
+      if (checkbox) {
+        if (checkbox.checked) card.classList.add('selected');
+        checkbox.addEventListener('change', () => {
+          card.classList.toggle('selected', checkbox.checked);
+        });
+      }
+    });
+
+    document.querySelectorAll('.custom-radio-card').forEach(card => {
+      const radio = card.querySelector('input[type="radio"]');
+      if (radio) {
+        radio.addEventListener('change', () => {
+          document.querySelectorAll(`input[name="${radio.name}"]`).forEach(r => {
+            r.closest('.custom-radio-card')?.classList.remove('selected');
+          });
+          card.classList.add('selected');
+        });
+      }
+    });
+
+    // Helper to get checked values
+    function getCheckedValues(name) {
+      return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`))
+        .map(el => el.value);
+    }
+
+    // Helper to safely get value or fallback
+    function getVal(id, fallback = 'ثبت نشده') {
+      const el = document.getElementById(id);
+      return el && el.value.trim() ? el.value.trim() : fallback;
+    }
+
+    // Generate Final Prompt
+    document.getElementById('btnGeneratePrompt').addEventListener('click', () => {
+      const lastPanel = steps[currentStepIndex];
+      const requiredInputs = Array.from(lastPanel.querySelectorAll('[required]'));
+      for (const input of requiredInputs) {
+        if (!input.value.trim()) {
+          input.reportValidity();
+          input.focus();
+          return;
+        }
+      }
+
+      const name = getVal('name');
+      const role = getVal('currentRole');
+      const experience = getVal('experience');
+      let industry = getVal('industry');
+      if (industry === 'سایر' && getVal('industryOther') !== 'ثبت نشده') {
+        industry += ` (${getVal('industryOther')})`;
+      }
+      const english = getVal('englishLevel');
+      const geographicGoal = getVal('geographicGoal');
+      const mainGoal = getVal('mainGoal');
+
+      const aiLevelRadio = document.querySelector('input[name="aiLevel"]:checked');
+      const aiLevel = aiLevelRadio ? aiLevelRadio.value : 'متوسط';
+      const aiUseCases = getCheckedValues('aiUse').join(' | ') || 'استفاده عمومی و چت کاری';
+      const aiHours = getVal('aiWeeklyHours');
+      const aiRealCase = getVal('aiRealCase');
+
+      const currentCerts = getCheckedValues('currentCerts').join(' ، ') || 'هیچ‌کدام ثبت نشده';
+      const targetCerts = getCheckedValues('targetCerts').join(' ، ') || 'تعیین نشده';
+      const certReason = getVal('certReason');
+
+      const specialty = getVal('specialty');
+      const contractSkills = getCheckedValues('contractSkills').join(' ، ') || 'مهارت قراردادی خاصی علامت نخورده است';
+      const projectMethod = getVal('projectMethod');
+      const agileLevel = getVal('agileLevel');
+      const mainWeakness = getVal('mainWeakness');
+
+      const targetRole = getVal('targetRole');
+      const incomeGoal = getVal('incomeGoal');
+      const weeklyTime = getVal('weeklyDevelopmentTime');
+      const learningPref = getVal('learningPreference');
+      const constraints = getVal('constraints');
+      const additionalInfo = getVal('additionalInfo');
+
+      const sanitizedNameForFile = name.replace(/\s+/g, '_');
+      document.getElementById('suggestedFileName').textContent = `PMPiran_2027_Career_Roadmap_${sanitizedNameForFile}.html`;
+
+      const promptTemplate = `نقش:
+تو یک مشاور ارشد و استراتژیست مسیر شغلی مدیران پروژه در PMPiran و BainovaCo هستی (Senior Executive Career Advisor & Future of Work Strategist).
+وظیفه تو این است که بر اساس اطلاعات پرسشنامه زیر، یک گزارش تحلیلی، خلاصه، کاربردی و مدیریتی (بدون روده درازی و بدون متون طولانی کلیشه‌ای) در قالب یک فایل HTML مستقل و شکیل تولید کنی.
+
+============================================================
+اطلاعات دریافت شده از فرم ارزیابی فرد:
+============================================================
+- نام و نام خانوادگی: ${name}
+- عنوان شغلی فعلی: ${role}
+- سابقه کار مدیریت پروژه: ${experience}
+- حوزه فعالیت و صنعت: ${industry}
+- تخصص کلیدی: ${specialty}
+- سطح زبان انگلیسی: ${english}
+- هدف جغرافیایی: ${geographicGoal}
+- هدف اصلی تا ۲۰۲۷: ${mainGoal}
+- نقش مطلوب در ۲۰۲۷: ${targetRole}
+- تارگت درآمدی/رشد: ${incomeGoal}
+- سطح فعلی AI: ${aiLevel}
+- موارد استفاده از AI: ${aiUseCases}
+- ساعت استفاده هفتگی از AI: ${aiHours}
+- نمونه واقعی استفاده از AI: ${aiRealCase}
+- مدارک فعلی: ${currentCerts}
+- مدارک هدف: ${targetCerts}
+- دلیل اخذ مدرک: ${certReason}
+- متدولوژی مدیریت پروژه: ${projectMethod}
+- سطح چابک: ${agileLevel}
+- دانش قراردادی/حقوقی: ${contractSkills}
+- نقطه ضعف اصلی: ${mainWeakness}
+- زمان هفتگی یادگیری: ${weeklyTime}
+- اولویت یادگیری: ${learningPref}
+- محدودیت‌ها و چالش‌ها: ${constraints}
+- توضیحات تکمیلی: ${additionalInfo}
+
+============================================================
+ساختار خروجی نقشه راه (مبتنی بر ۴ گام تصویری کلیدی):
+============================================================
+خروجی باید به صورت متمرکز و خلاصه (Executive Summary & Actionable Roadmap) بر اساس ۴ محور اصلی زیر طراحی و تحلیل شود:
+
+۱. ادغام روزمره AI (AI Integration):
+   - نحوه کاربرد روزانه ChatGPT / Claude / Copilot در محیط کاری فرد متناسب با صنعت وی («${industry}»).
+   - معرفی ۲ الی ۳ دستیار اختصاصی ملموس (دستیار زمان‌بندی، تولید سناریوی ریسک، آنالیز اسناد).
+   - اقدام مشخص و KPI سنجش صرفه‌جویی زمان.
+
+۲. دریافت گواهینامه‌های اعتباربخش و رشد جهانی (Credentials & Global Recognition):
+   - تعیین دقیق گواهینامه اولویت‌دار (PMP یا PMI-ACP یا مدارک تخصصی مدیریت ادعا/ساخت) متناسب با مدارک فعلی وی («${currentCerts}»).
+   - تأکید بسیار پررنگ بر گذراندن دوره‌ها و بوت‌کمپ‌های رسمی تحت نظارت مرجع رسمی بین‌المللی PMI ATP از طریق BainovaCo (با پیوند مستقیم https://bainovaco.com/en) جهت دریافت محتوای لایسنس‌شده، شبیه‌ساز رسمی و ساعات آموزشی معتبر (Contact Hours / PDUs).
+   - دریافت مشاوره اختصاصی تعیین صلاحیت (Eligibility)، ارزیابی رزومه و تدوین استراتژی آمادگی آزمون از مشاوران و اساتید باسابقه PMPiran (همراه با لینک مستقیم pmpiran.com).
+   - پیشنهاد شرکت در رقابت‌ها و مسابقات بین‌المللی مدیریت پروژه (PM Case Competitions / PMI Global Awards / چالش‌های تخصصی) جهت ایجاد تمایز چشمگیر در سطح منطقه و رزومه بین‌المللی.
+
+۳. تقویت دانش حقوقی - قراردادی (Contractual & Legal Mastery):
+   - ارتقای تسلط بر شرایط عمومی پیمان (نشریه ۴۳۱۱)، قوانین مناقصات، قراردادهای فیدیک (FIDIC) و متدولوژی تحلیل تاخیرات زمانی (Delay Analysis بر مبنای SCL).
+   - رفع نقاط ضعف قراردادی شناسایی شده («${contractSkills}»).
+
+۴. تفکر هیبریدی (Hybrid Thinking):
+   - ترکیب متدولوژی‌های چابک (Scrum/Agile) در بستر برنامه‌ریزی سنتی و ساخت‌یافته صنایع و سازمان‌ها.
+   - تعیین دقیق بخش‌های پیش‌بینانه (Predictive) و بخش‌های چابک و نقش‌های اجرایی.
+
+بخش‌های تکمیلی و کوتاه:
+- داشبورد بصری امتیاز آمادگی (Readiness Score) در هدر.
+- برنامه عملیاتی ۹۰ روز اول (فازبندی فشرده) + ۳ اقدام قطعی برای همین هفته.
+- جدول ۵ ریسک مسیر شغلی به صورت مختصر.
+- دکمه‌ها و کارت‌های ارتباطی برجسته:
+  * دکمه ۱: ثبت‌نام در دوره‌های بین‌المللی رسمی PMI ATP در BainovaCo (https://bainovaco.com/en).
+  * دکمه ۲: دریافت وقت مشاوره اختصاصی بررسی صلاحیت و هدایت شغلی در PMPiran (https://pmpiran.com).
+
+============================================================
+الزامات فنی فایل خروجی HTML:
+============================================================
+- فقط یک فایل Standalone با فرمت HTML (با استایل Tailwind CSS درون صفحه و فونت Vazirmatn).
+- راست‌چین (RTL) و کاملاً واکنش‌گرا (موبایل و دسکتاپ) به همراه قابلیت چاپ تمیز / Print PDF.
+- استفاده از پالت رنگی رسمی PMPiran:
+  * سرمه‌ای تیره: #003B6B
+  * آبی سازمانی: #00569B
+  * نارنجی برنگین: #FF5500
+  * خاکستری زغالی: #46484D
+  * پس‌زمینه لایت: #F5F8FB
+- لوگو، نام و لینک هر دو مرکز PMPiran (https://pmpiran.com) و BainovaCo (https://bainovaco.com/en) در ابتدا، انتهای صفحه و بخش پیشنهاد دوره‌ها درج شود.
+- خروجی را مستقیماً داخل یک بلوک کد با تگ html ارائه کن.`;
+
+      const promptOutput = document.getElementById('promptOutput');
+      promptOutput.value = promptTemplate;
+
+      const resultCard = document.getElementById('resultCard');
+      resultCard.classList.remove('hidden');
+      resultCard.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Copy to Clipboard (Fallback compatible)
+    document.getElementById('btnCopyPrompt').addEventListener('click', () => {
+      const outputText = document.getElementById('promptOutput');
+      outputText.select();
+      outputText.setSelectionRange(0, 99999);
+      
+      let success = false;
+      try {
+        success = document.execCommand('copy');
+      } catch (err) {
+        success = false;
+      }
+
+      const copyBtnText = document.getElementById('copyBtnText');
+      if (success) {
+        copyBtnText.textContent = 'کپی شد ✓';
+        setTimeout(() => { copyBtnText.textContent = 'کپی در کلیپ‌بورد'; }, 2200);
+      } else {
+        copyBtnText.textContent = 'متن انتخاب شد (Ctrl+C)';
+        setTimeout(() => { copyBtnText.textContent = 'کپی در کلیپ‌بورد'; }, 2500);
+      }
+    });
+
+    // Download Prompt as TXT File
+    document.getElementById('btnDownloadPrompt').addEventListener('click', () => {
+      const text = document.getElementById('promptOutput').value;
+      const name = getVal('name', 'User').replace(/\s+/g, '_');
+      const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = `PMPiran_2027_Prompt_${name}.txt`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(link.href);
+    });
+  </script>
+</body>
+</html>
